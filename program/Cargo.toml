@@ -1,0 +1,36 @@
+[package]
+name = "ze-program"
+description = "ZE is a proof-of-work token everyone can mine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+repository.workspace = true
+readme.workspace = true
+keywords.workspace = true
+build = "build.rs"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "ze"
+
+[features]
+default = []
+
+[dependencies]
+drillx.workspace = true
+solana-include-idl = "0.1"
+mpl-token-metadata.workspace = true
+ze-api.workspace = true
+ze-boost-api.workspace = true
+solana-program.workspace = true
+spl-token.workspace = true
+spl-associated-token-account.workspace = true
+steel.workspace = true
+
+[dev-dependencies]
+rand = "0.8.5"
+
+[build-dependencies]
+solana-include-idl = { version = "0.1", features = ["shrink"] }
